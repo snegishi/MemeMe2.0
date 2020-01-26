@@ -11,7 +11,7 @@
         <scene sceneID="eQj-cP-ATZ">
             <objects>
                 <navigationController title="Collection" id="2b9-mE-Stg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" id="Tbs-IB-hyv"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="collection_30x30" selectedImage="collection_30x30" id="Tbs-IB-hyv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ldd-Sq-7b6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -114,7 +114,7 @@
         <scene sceneID="j5K-hX-kFm">
             <objects>
                 <navigationController title="Table" id="o3f-Sg-gX9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" id="fG8-h0-hPv"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="table_30x30" selectedImage="table_30x30" id="fG8-h0-hPv"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h6b-Jx-447">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="-856.52173913043487" y="-423.21428571428572"/>
         </scene>
-        <!--Villains-->
+        <!--SentMemes-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="Villains" id="vXZ-lx-hvc" customClass="ViewController" customModule="MemeMe2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SentMemes" id="vXZ-lx-hvc" customClass="ViewController" customModule="MemeMe2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -236,4 +236,8 @@
             <point key="canvasLocation" x="707" y="-394"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="collection_30x30" width="30" height="30"/>
+        <image name="table_30x30" width="30" height="30"/>
+    </resources>
 </document>

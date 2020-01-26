@@ -26,6 +26,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Used to choose a photo for a material</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Used to save a meme photo for keeping</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Used to take a photo for a material</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

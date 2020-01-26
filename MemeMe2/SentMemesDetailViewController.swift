@@ -1,6 +1,6 @@
 //
 //  SentMemesDetailViewController.swift
-//  
+//
 //
 //  Created by Jason on 12/12/14.
 //  Copyright (c) 2014 Udacity. All rights reserved.
@@ -14,7 +14,8 @@ class SentMemesDetailViewController: UIViewController {
     
     // MARK: Properties
     
-    var villain: Villain!
+//    var villain: Villain!
+    var meme: Meme!
     
     // MARK: Outlets
     
@@ -25,11 +26,11 @@ class SentMemesDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.label.text = self.villain.name
+        self.label.text = "\(self.meme.topText)...\(self.meme.bottomText)"
   
         self.tabBarController?.tabBar.isHidden = true
         
-        self.imageView!.image = UIImage(named: villain.imageName)
+        self.imageView!.image = self.meme!.memedImage
     }
     
     override func viewWillDisappear(_ animated: Bool) {

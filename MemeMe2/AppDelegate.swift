@@ -14,13 +14,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: Properties
-    
+
+    var memes = [Meme]()
     var window: UIWindow?
+    
+    var editorStoryboard: UIStoryboard!
     
     // MARK: UIApplicationDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         // Override point for customization after application launch.
+        
+        editorStoryboard = UIStoryboard(name: "Editor", bundle: nil)
+        
         return true
     }
 }
