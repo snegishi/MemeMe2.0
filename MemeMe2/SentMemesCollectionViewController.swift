@@ -14,21 +14,19 @@ import UIKit
 class SentMemesCollectionViewController: UICollectionViewController {
     
     // MARK: Properties
-    
-    // outlet to flowLayout here.
-    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
-    
+        
     var memes = [Meme]()
+    
+    // MARK: IBOutlets
+    
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    //@IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        // get shared meme data
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        self.memes = appDelegate.memes
-
         // Edit Button
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New", style: .plain, target: self, action: #selector(startEditor))
         
@@ -41,10 +39,19 @@ class SentMemesCollectionViewController: UICollectionViewController {
         flowLayout.itemSize = CGSize(width: dimension, height: dimension)
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // get shared meme data
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.memes = appDelegate.memes
+        
+        self.collectionView.reloadData()
+    }
 
     @objc func startEditor() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let editorController = appDelegate.editorStoryboard!.instantiateViewController(withIdentifier: "EditorViewController") as! EditorViewController
+        editorController.modalPresentationStyle = .fullScreen
         self.present(editorController, animated: true, completion: nil)
     }
     
@@ -62,10 +69,7 @@ class SentMemesCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SentMemesCollectionViewCell", for: indexPath) as! SentMemesCollectionViewCell
-        let meme = self.memes[(indexPath as NSIndexPath).row]
-        
-        // Set the name and image
-        cell.nameLabel.text = "\(meme.topText)...\(meme.bottomText)"
+        let meme = self.memes[(indexPath as NSIndexPath).row]        
         cell.villainImageView?.image = meme.memedImage
         
         return cell

@@ -16,22 +16,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var memes = [Meme]()
     
-    // Life Cycle
+    // MARK: IBOutlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
+        // Edit Button
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New", style: .plain, target: self, action: #selector(startEditor))
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         // get shared meme data
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.memes = appDelegate.memes
         
-        // Edit Button
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New", style: .plain, target: self, action: #selector(startEditor))
+        self.tableView.reloadData()
     }
     
     @objc func startEditor() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let editorController = appDelegate.editorStoryboard!.instantiateViewController(withIdentifier: "EditorViewController") as! EditorViewController
+        editorController.modalPresentationStyle = .fullScreen
         self.present(editorController, animated: true, completion: nil)
     }
     

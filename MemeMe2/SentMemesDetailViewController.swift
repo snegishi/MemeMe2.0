@@ -20,13 +20,13 @@ class SentMemesDetailViewController: UIViewController {
     // MARK: Outlets
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var label: UILabel!
+    //@IBOutlet weak var label: UILabel!
     
     // MARK: Life Cycle
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.label.text = "\(self.meme.topText)...\(self.meme.bottomText)"
+        //self.label.text = "\(self.meme.topText)...\(self.meme.bottomText)"
   
         self.tabBarController?.tabBar.isHidden = true
         
