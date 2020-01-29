@@ -74,28 +74,38 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gjn-AD-PDc">
-                                <rect key="frame" x="193" y="138" width="28" height="18.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="gjn-AD-PDc">
+                                <rect key="frame" x="20" y="138" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="e0B-sD-pPH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dH7-Cd-3z7">
-                                <rect key="frame" x="177" y="778.5" width="60" height="18.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="dH7-Cd-3z7">
+                                <rect key="frame" x="20" y="767" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LrE-qj-po2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="gjn-AD-PDc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0Zh-ps-slY"/>
                             <constraint firstItem="TqL-sC-zcG" firstAttribute="top" secondItem="bxY-mV-Z6v" secondAttribute="bottom" id="425-KS-Tf1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dH7-Cd-3z7" secondAttribute="trailing" constant="20" id="60d-Uq-g60"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gjn-AD-PDc" secondAttribute="trailing" constant="20" id="CaV-TZ-PS9"/>
                             <constraint firstItem="TqL-sC-zcG" firstAttribute="bottom" secondItem="dH7-Cd-3z7" secondAttribute="bottom" constant="50" id="DXN-63-64O"/>
                             <constraint firstItem="gjn-AD-PDc" firstAttribute="top" secondItem="TqL-sC-zcG" secondAttribute="top" constant="50" id="Dxi-Nb-h2p"/>
+                            <constraint firstItem="gjn-AD-PDc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FHJ-8N-F8d"/>
                             <constraint firstItem="TqL-sC-zcG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IAA-cO-HUE"/>
                             <constraint firstAttribute="bottom" secondItem="XLZ-og-qUw" secondAttribute="bottom" id="K1R-se-30b"/>
-                            <constraint firstItem="gjn-AD-PDc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q8l-e1-fWY"/>
                             <constraint firstItem="TqL-sC-zcG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RQe-NV-iph"/>
                             <constraint firstItem="dH7-Cd-3z7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="caZ-Rc-5CJ"/>
                             <constraint firstItem="XLZ-og-qUw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dFI-Ni-E6u"/>
+                            <constraint firstItem="dH7-Cd-3z7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hia-2S-imK"/>
                             <constraint firstItem="bxY-mV-Z6v" firstAttribute="trailing" secondItem="TqL-sC-zcG" secondAttribute="trailing" id="j5s-IC-zPz"/>
                             <constraint firstItem="bxY-mV-Z6v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mqy-za-QXg"/>
                             <constraint firstItem="bxY-mV-Z6v" firstAttribute="leading" secondItem="TqL-sC-zcG" secondAttribute="leading" id="nEZ-gB-ey8"/>

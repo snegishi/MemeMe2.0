@@ -178,11 +178,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FDo-XX-WHk">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FDo-XX-WHk">
+                                <rect key="frame" x="20" y="20" width="374" height="856"/>
                             </imageView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FDo-XX-WHk" secondAttribute="trailing" constant="20" symbolic="YES" id="1lq-s5-2KZ"/>
+                            <constraint firstAttribute="bottom" secondItem="FDo-XX-WHk" secondAttribute="bottom" constant="20" symbolic="YES" id="JDc-ua-bST"/>
+                            <constraint firstItem="FDo-XX-WHk" firstAttribute="leading" secondItem="WRP-TS-v5n" secondAttribute="leading" constant="20" symbolic="YES" id="Muo-b4-o4S"/>
+                            <constraint firstItem="FDo-XX-WHk" firstAttribute="top" secondItem="WRP-TS-v5n" secondAttribute="top" constant="20" symbolic="YES" id="cAm-Ul-6wr"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="FDo-XX-WHk" id="X0Y-nd-xWC"/>
